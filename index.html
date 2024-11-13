@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+        <nav>
+        <div class="Logo">    
+            <h1 id="home">Restaurante da Casa</h1>
+        </div>
+        <ul>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#serviços" id="servicos">Serviços</a></li>
+        </ul>
+    </nav>
+
+    <div class="Titulos"> 
+        <h2 id="cardapio">Faça Seu Pedido</h2>
+    </div>
+
+   
+<!-- Bloco Tira-Gosto -->
+<div class="menu-section">
+    <i class="fas fa-chevron-down toggle-icon" onclick="toggleOptions('tira-gosto-options', this)" aria-expanded="false"></i>
+    <label>Tira-Gosto</label>
+    <div id="tira-gosto-options" class="cards-container hidden">
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.mM356l6WgwOsvkM3U1oykgHaEK?rs=1&pid=ImgDetMain" alt="Salada Verde">
+            <div class="card-content">
+                <h1>Salada Verde</h1>
+                <span>R$12,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Salada Verde - R$12,00" id="saladaVerde">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.tendaatacado.com.br/dicas/wp-content/webp-express/webp-images/uploads/2022/06/como-fazer-batata-frita-topo.jpg.webp" alt="Batatas Fritas">
+            <div class="card-content">
+                <h1>Batatas Fritas</h1>
+                <span>R$10,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Batatas Fritas - R$10,00" id="batataFrita">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://topreceitas.com.br/wp-content/uploads/2020/08/free-photo-of-close-up-of-meat-and-fries-scaled-829x550.jpeg" alt="Petiscos">
+            <div class="card-content">
+                <h1>Petiscos</h1>
+                <span>R$52,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Petiscos - R$52,00" id="petiscos">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.saborbrasil.it/wp-content/uploads/2021/06/Bolinho-bacalhau.jpg" alt="Bolinho de Bacalhau">
+            <div class="card-content">
+                <h1>Bolinho de Bacalhau</h1>
+                <span>R$12,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Bolinho de Bacalhau - R$12,00" id="bolinhoBacalhau">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+       <!-- Bloco Pratos Principais -->
+<div class="menu-section">
+    <i class="fas fa-chevron-down toggle-icon" onclick="toggleOptions('pratos-options', this)" aria-expanded="false"></i>
+    <label>Pratos Principais</label>
+    <div id="pratos-options" class="cards-container hidden">
+        <div class="card">
+            <img src="https://colunaitalo.com.br/upload/noticias/3304/CAPA_DESTAQUE_1_view.jpg" alt="Feijoada">
+            <div class="card-content">
+                <h1>Feijoada</h1>
+                <span>R$35,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Feijoada" id="feijoada">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://static.itdg.com.br/images/640-400/f050711088de12b04bf3765ce6dfce8f/342842-original.jpg" alt="Filé à Parmegiana">
+            <div class="card-content">
+                <h1>Filé à Parmegiana</h1>
+                <span>R$40,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Filé à Parmegiana" id="fileParmegiana">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.delicioso.com.br/wp-content/uploads/migration/moqueca-de-peixe-1222-1400x800.jpg" alt="Moqueca de Peixe">
+            <div class="card-content">
+                <h1>Moqueca de Peixe</h1>
+                <span>R$45,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Moqueca de Peixe" id="moquecaPeixe">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://vitat.com.br/receitas/images/recipeshandler.jpg?id=11453&tipo=r&default=s&ims=fit-in/414x275/filters:quality(60)" alt="Frango Assado com Ervas">
+            <div class="card-content">
+                <h1>Frango Assado com Ervas</h1>
+                <span>R$30,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Frango Assado com Ervas" id="frangoAssadoComErvas">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://portal.lodivino.com.br/images/receitas/lasanha-a-bolonhesa.jpg" alt="Lasanha à Bolonhesa">
+            <div class="card-content">
+                <h1>Lasanha à Bolonhesa</h1>
+                <span>R$35,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Lasanha à Bolonhesa" id="lasanhaBolonhesa">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.4ELiRS7iXwio_CMW6JF8ggHaER?rs=1&pid=ImgDetMain" alt="Macorronada">
+            <div class="card-content">
+                <h1>Macorronada</h1>
+                <span>R$28,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Macorronada" id="macarronada">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://th.bing.com/th/id/R.8fa46f0c6107f2cef48ba950bfe6ea21?rik=YA5wHn%2fYzAOcqw&riu=http%3a%2f%2fwww.saboresajinomoto.com.br%2fuploads%2fimages%2frecipes%2fescondidinho-com-carne-seca.jpg&ehk=VWqXTMQ69xWwU5s3%2fgB%2bM0T8OemEFxQP%2fHsS6HHGg7Y%3d&risl=&pid=ImgRaw&r=0" alt="Escondidinho de Carne Seca">
+            <div class="card-content">
+                <h1>Escondidinho de Carne Seca</h1>
+                <span>R$28,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Escondidinho de Carne Seca" id="escondidinhoCarneSeca">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+                            
+
+    
+        <!-- Bloco Sobremesas -->
+    <div class="menu-section">
+   <i class="fas fa-chevron-down toggle-icon" onclick="toggleOptions('sobremesas-options', this)" aria-expanded="false"></i>
+    <label>Sobremesas</label>
+    <div id="sobremesas-options" class="cards-container hidden">
+        <div class="card">
+            <img src="https://www.receiteria.com.br/wp-content/uploads/receitas-de-brigadeiro.jpg" alt="Brigadeiro">
+            <div class="card-content">
+                <h1>Brigadeiro</h1>
+                <span>R$5,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Brigadeiro" id="brigadeiro">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://receitatodahora.com.br/wp-content/uploads/2022/02/petit-gateau-scaled.jpg" alt="Petit Gateau">
+            <div class="card-content">
+                <h1>Petit Gateau</h1>
+                <span>R$18,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Petit Gateau" id="petitGateau">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.minhareceita.com.br/app/uploads/2024/07/mobile-pudim-de-leite.png" alt="Pudim de Leite">
+            <div class="card-content">
+                <h1>Pudim de Leite</h1>
+                <span>R$12,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Pudim de Leite" id="pudimLeite">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.bcnoticias.com.br/wp-content/uploads/2024/03/mousse-maracuja-e1710007587625.webp" alt="Mousse de Maracujá">
+            <div class="card-content">
+                <h1>Mousse de Maracujá</h1>
+                <span>R$10,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Mousse de Maracujá" id="mousseMaracuja">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.receiteria.com.br/wp-content/uploads/torta-de-morango.jpg" alt="Torta de Morango">
+            <div class="card-content">
+                <h1>Torta de Morango</h1>
+                <span>R$15,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Torta de Morango" id="tortaMorango">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.receiteria.com.br/wp-content/uploads/bolo-de-chocolate.jpg" alt="Bolo de Chocolate">
+            <div class="card-content">
+                <h1>Bolo de Chocolate</h1>
+                <span>R$10,00</span>
+                <label>
+                    <input type="checkbox" name="produto" value="Bolo de Chocolate" id="boloChocolate">
+                    Adicionar Pedido
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <!-- Bloco Bebidas -->
+      <div class="menu-section">
+        <label>Bebidas</label>
+        <i class="fas fa-chevron-down toggle-icon" onclick="toggleOptions('bebidas-options', this)" aria-expanded="false"></i>
+    
+        <!-- Bloco de opções Bebidas com cards -->
+        <div id="bebidas-options" class="cards-container hidden">
+            <div class="card">
+                <img src="https://static.itdg.com.br/images/1200-675/7a00b46f2e78b220deb7c80ac5f8cb16/352517-original.jpg" alt="Suco de Limão">
+                <div class="card-content">
+                    <h1>Suco de Limão</h1>
+                    <span>R$5,00</span>
+                    <label>
+                        <input type="checkbox" name="produto" value="Suco de Limão" id="sucoLimao">
+                        Adicionar Pedido
+                    </label>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://agro.estadao.com.br/app/uploads/2024/03/suco-laranja-2.jpg" alt="Suco de Laranja">
+                <div class="card-content">
+                    <h1>Suco de Laranja</h1>
+                    <span>R$5,00</span>
+                    <label>
+                        <input type="checkbox" name="produto" value="Suco de Laranja" id="sucoLaranja">
+                        Adicionar Pedido
+                    </label>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.designi.com.br/images/preview/10136072.jpg" alt="Suco de Maracujá">
+                <div class="card-content">
+                    <h1>Suco de Maracujá</h1>
+                    <span>R$5,00</span>
+                    <label>
+                        <input type="checkbox" name="produto" value="Suco de Maracujá" id="sucoMaracuja">
+                        Adicionar Pedido
+                    </label>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://blog.biglar.com.br/wp-content/uploads/2023/01/delicioso-suco-de-goiaba-vermelha-lado-de-uma-fatia-de-goiaba-no-fundo-goiabas-e-folhas-em-madeira-rustica.jpg" alt="Suco de Goiaba">
+                <div class="card-content">
+                    <h1>Suco de Goiaba</h1>
+                    <span>R$5,00</span>
+                    <label>
+                        <input type="checkbox" name="produto" value="Suco de Goiaba" id="sucoGoiaba">
+                        Adicionar Pedido
+                    </label>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4-CXT0cubDW3YfjVeJoNN2Wf4JZgtuqPqWA&s" alt="Suco de Manga">
+                <div class="card-content">
+                    <h1>Suco de Manga</h1>
+                    <span>R$5,00</span>
+                    <label>
+                        <input type="checkbox" name="produto" value="Suco de Manga" id="sucoManga">
+                        Adicionar Pedido
+                    </label>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://valeonnoticias.com.br/wp-content/uploads/2023/07/CERVEJAS-1.png" alt="Cerveja">
+                <div class="card-content">
+                    <h1>Cervejas</h1>
+                    <span>R$10,00</span>
+                    <label>
+                        <input type="checkbox" name="produto" value="Cerveja" id="cerveja">
+                        Adicionar Pedido
+                    </label>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.tcdn.com.br/img/img_prod/774261/whisky_jhonnie_walker_red_label_750ml_3667_1_c3a21748d4b12e9111d3ba1066f5a97f.jpg" alt="Whisky">
+                <div class="card-content">
+                    <h1>Whisky (a dose)</h1>
+                    <span>R$20,00</span>
+                    <label>
+                        <input type="checkbox" name="produto" value="Whisky" id="whisky">
+                        Adicionar Pedido
+                    </label>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://drogariamoderna.vtexassets.com/arquivos/ids/251997-800-auto?v=638151218022670000&width=800&height=auto&aspect=true" alt="Água">
+                <div class="card-content">
+                    <h1>Água</h1>
+                    <span>R$3,00</span>
+                    <label>
+                        <input type="checkbox" name="produto" value="Água" id="agua">
+                        Adicionar Pedido
+                    </label>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://perfectdailygrind.com/pt/wp-content/uploads/sites/5/2020/03/Paul-Mordheweyk-1024x850.jpg" alt="Café expresso">
+                <div class="card-content">
+                    <h1>Café expresso</h1>
+                    <span>R$3,00</span>
+                    <label>
+                        <input type="checkbox" name="produto" value="Café expresso" id="cafeExpresso">
+                        Adicionar Pedido
+                    </label>
+                </div>
+            </div>
+     </div>
+     </div>
+
+     <div class="botao-acao">
+            <button class= "fazer-pedido" onclick="salvarInformacoes()" id="confirmar">Finalizar Pedido</button>
+        </div>
+
+    <script src="../script/index.js"></script>
+    </script>
+</body>
+</html>

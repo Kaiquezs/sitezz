@@ -1,0 +1,236 @@
+
+/* Cabeçalho//NAV BAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.separador{
+    border-style:groove;
+    border-color: yellow;
+    border-left: black;
+    border-top: black;
+    border-bottom: black;
+}
+
+/* Garantir que o conteúdo não seja sobreposto pela navbar fixa */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #033c79;
+    padding-top: 80px; /* Ajuste a altura conforme a altura da navbar */
+}
+
+/* Caso queira aplicar no conteúdo diretamente abaixo da navbar (por exemplo, no <main> ou <section>) */
+main {
+    margin-top: 80px; /* Também pode ser margin-top se preferir */
+}
+
+nav {
+    background-color: #067c02; /* Cor de fundo da navbar */
+    height: 80px; /* Altura da navbar */
+    width: 100%; /* Largura total */
+    position: fixed; /* Fixa a navbar no topo */
+    top: 0; /* Posiciona a navbar exatamente no topo */
+    left: 0; /* Garante que ela comece do lado esquerdo */
+    z-index: 1000;  /* Garante que a navbar fique acima de outros conteúdos */
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    margin:0px; /* Remove a margem da lista */
+    padding: 0; /* Remove o preenchimento,em volta da lista */
+    display: flex; /* Flexbox para distribuição dos itens */
+    justify-content: flex-end; /* Alinha os itens à direita */
+    align-items: center; /* Alinha verticalmente os itens */
+    height: 0px; /* Faz a lista ocupar a altura da navbar */
+    
+}
+
+nav ul li {
+    margin: 0; /* Remove a margem dos itens da lista */
+}
+
+nav ul li a {
+    display: block;
+    padding: 20px 30px; /* Espaçamento interno dos links */
+    color: white; /* Cor do texto dos links */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove o sublinhado */
+    word-spacing: 5px; /* Aumenta o espaçamento entre palavras */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration:rgb(0, 73, 156) underline; /* Cor ao passar o mouse nos links */
+    height: 10px;
+}
+
+.Logo{
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: italic;
+    height: 25px;
+    margin-left: 20px;
+    font-family: Poppins;
+   
+}
+
+.Titulos{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    margin-left:25px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+.cards-container {
+    display: flex; /* Utiliza o modelo Flexbox para o layout. */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha quando não houver espaço suficiente. */
+    gap: 20px; /* Espaçamento entre os cards. */
+    padding: 20px; /* Espaço interno ao redor do contêiner. */
+    margin: 20px; /* Espaço externo ao redor do contêiner. */
+}
+
+.menu-section {
+    padding: 15px; /* Espaço interno dentro da seção do menu. */
+    margin-bottom: 20px; /* Espaço abaixo da seção do menu. */
+    background-color: #f9f9f9; /* Cor de fundo da seção do menu. */
+    border-radius: 8px; /* Cantos arredondados na seção do menu. */
+}
+
+.menu-section h2 {
+    display: inline-block; /* Permite que o elemento h2 seja tratado como um bloco inline. */
+    font-size: 1.5em; /* Tamanho da fonte do título da seção do menu. */
+}
+
+.toggle-icon {
+    font-size: 1.0em; /* Tamanho do ícone de alternância (seta). */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável. */
+    float: right; /* Alinha o ícone à direita da seção. */
+    color: #555; /* Cor do ícone. */
+}
+
+.cards-container {
+    display: grid; /* Utiliza o modelo de grid para layout. */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Cria colunas que se ajustam automaticamente com largura mínima de 150px. */
+    gap: 10px; /* Espaçamento entre os itens da grid. */
+    margin-top: 15px; /* Espaço acima da grid de opções. */
+}
+
+.hidden {
+    display: none; /* Esconde os elementos que têm essa classe. */
+}
+
+.card {
+    background-color: #fff; /* Cor de fundo do card. */
+    width: 150px; /* Largura fixa dos cards. */
+    border-radius: 8px; /* Cantos arredondados dos cards. */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor dos cards. */
+    text-align: center; /* Alinha o texto dentro do card ao centro. */
+    overflow: hidden; /* Oculta conteúdo que exceder a área do card. */
+    transition: transform 0.2s; /* Animação ao passar o mouse. */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta o card levemente ao passar o mouse. */
+}
+
+.card img {
+    width: 100%; /* Imagem ocupa toda a largura do card. */
+    height: auto; /* Mantém a proporção da imagem ao redimensionar. */
+    border-radius: 8px; /* Arredonda os cantos da imagem. */
+}
+
+.card-content {
+    padding: 5px; /* Espaço interno dentro do conteúdo do card. */
+}
+
+.card h1 {
+    font-size: 1.2em; /* Tamanho da fonte do título no card. */
+    margin: 10px 0; /* Espaço acima e abaixo do título. */
+}
+
+.card span {
+    color: #4CAF50; /* Cor do preço do prato. */
+    font-weight: bold; /* Deixa o preço em negrito. */
+    display: block; /* Faz com que o preço ocupe toda a largura disponível. */
+    margin-bottom: 8px; /* Espaço abaixo do preço. */
+}
+
+
+.card button:hover {
+    background-color: #1a75d4; /* Muda a cor de fundo ao passar o mouse sobre o botão. */
+    transform: scale(1.05); /* Aumenta o botão levemente ao passar o mouse. */
+}
+
+label {
+    font-family: 'Nunito', sans-serif; /* Aplica a fonte Nunito */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    margin-bottom: 2px; /* Espaço abaixo do label */
+    display: block; /* Faz o label ocupar toda a largura disponível */
+}
+
+input[type="checkbox"] {
+    accent-color: #1a75d4; /* Muda a cor do checkbox */
+    width: 20px; /* Ajusta a largura */
+    height: 20px; /* Ajusta a altura */
+}
+
+
+
+.botao-acao {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.fazer-pedido {
+    background-color: #07a30f; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    text-decoration: none;
+    border: none; /* Remove a borda padrão */
+    padding: 12px 20px; /* Espaçamento interno (vertical e horizontal) */
+    font-size: 16px; /* Tamanho da fonte */
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 6px; /* Cantos arredondados */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão */
+    transition: background-color 0.3s, transform 0.2s; /* Animações para hover */
+}
+
+.fazer-pedido:hover {
+    background-color: rgb(3, 124, 3); /* Muda a cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o botão levemente */
+}
+
+.fazer-pedido:active {
+    transform: scale(0.95); /* Diminui um pouco o botão ao clicar */
+}
+
+@media (max-width: 600px) {
+    .cards-container {
+        grid-template-columns: 1fr; /* Exibe os cards em uma única coluna */
+    }
+
+    nav ul {
+        justify-content: center; /* Centraliza os itens na navbar em dispositivos móveis */
+    }
+
+    .Logo {
+        font-size: 22px; /* Ajusta o tamanho da logo */
+    }
+}
+
+
+.selecionar{
+    background-color: yellow;
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+}
