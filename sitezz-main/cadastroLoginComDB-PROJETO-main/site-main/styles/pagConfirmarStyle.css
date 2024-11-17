@@ -1,0 +1,166 @@
+/* Reseta as margens e paddings para garantir que não haja conflitos de estilo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #033c79; /* Cor de fundo azul escuro */
+    color: #333; /* Cor do texto */
+}
+
+    /* Estilo da barra de navegação */
+    nav {
+        background-color: #067c02; /* Cor de fundo da navbar */
+        height: 80px; /* Altura da navbar */
+        width: 100%; /* Largura total */
+        position: fixed; /* Fixa a navbar no topo */
+        top: 0; /* Posiciona a navbar exatamente no topo */
+        left: 0; /* Garante que ela comece do lado esquerdo */
+        z-index: 1000; /* Garante que a navbar fique acima de outros conteúdos */
+        display: flex; /* Usa flexbox para organizar os itens dentro da navbar */
+        justify-content: space-between; /* Logo à esquerda e links à direita */
+        align-items: center; /* Alinha os itens verticalmente */
+        padding: 0 20px; /* Espaçamento nas laterais */
+    }
+
+/* Estilo da logo (não clicável) */
+.Logo h1 {
+    color: #ffffff; /* Cor da logo */
+    font-size: 28px; /* Tamanho da fonte */
+    font-weight: bold;
+    font-style: italic; /* Estilo itálico */
+    margin: 0; /* Remove a margem */
+    font-family: Poppins; /* Fonte Poppins */
+}
+
+/* Estilo do menu de navegação */
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    margin: 0; /* Remove a margem */
+    padding: 0; /* Remove o preenchimento */
+    display: flex; /* Flexbox para distribuir os itens */
+    justify-content: flex-end; /* Alinha os itens à direita */
+    align-items: center; /* Alinha verticalmente os itens */
+    height: 100%; /* Faz a lista ocupar toda a altura da navbar */
+}
+
+nav ul li {
+    margin: 0; /* Remove a margem dos itens da lista */
+}
+
+nav ul li a {
+    display: block;
+    padding: 20px 30px; /* Espaçamento interno nos links */
+    color: white; /* Cor do texto dos links */
+    text-align: center; /* Centraliza o texto dentro dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    word-spacing: 5px; /* Aumenta o espaçamento entre palavras */
+    font-family: 'Times New Roman', Times, serif; /* Fonte para os links */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa os links em negrito */
+    transition: color 0.3s ease; /* Transição suave para a cor do texto */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Sublinha o texto ao passar o mouse */
+    color: #004a9c; /* Altera a cor do link para azul ao passar o mouse */
+}
+
+/* Estilo do título da página */
+h1 {
+    text-align: center;
+    color: #067c02; /* Cor verde */
+    margin-top: 90px; /* Espaço acima para não sobrepor a navbar */
+}
+
+/* Estilo das seções */
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+/* Estilo dos botões de ação */
+.botoes-acao {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-confirmar, .btn-voltar {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+.btn-confirmar {
+    background-color: #07a30f;
+    color: white;
+}
+
+.btn-confirmar:hover {
+    background-color: #357739;
+    transform: scale(1.05);
+}
+
+.btn-voltar {
+    background-color: rgb(223, 20, 20);
+    color: white;
+}
+
+.btn-voltar:hover {
+    background-color: rgb(167, 0, 0);
+    transform: scale(1.05);
+}
+
+/* Estilo do rodapé */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #4CAF50; /* Verde ao passar o mouse */
+    text-decoration: underline;
+}
+
+.teste{
+    color: blue;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Organiza os itens em uma coluna em telas pequenas */
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column; /* Organiza os links em uma coluna */
+        gap: 10px;
+    }
+
+    .Logo h1 {
+        font-size: 24px; /* Reduz o tamanho da logo em telas pequenas */
+    }
+
+    .btn-confirmar, .btn-voltar {
+        width: 100%; /* Faz os botões ocuparem toda a largura disponível */
+        margin-bottom: 10px;
+    }
+}

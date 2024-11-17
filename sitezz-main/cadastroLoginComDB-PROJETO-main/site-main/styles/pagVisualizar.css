@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #54613d;
+    padding-top: 80px; /* Ajuste a altura conforme a altura da navbar */
+}
+
+section {
+    background-color: #78b5e7;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 10px; /* Remova o padding para que o conteúdo fique colado na borda */
+    width: 200px;
+    height: 200px; /* Ajuste o tamanho conforme necessário */
+    display: flex;
+    flex-direction: column; /* Coloca os itens um abaixo do outro */
+    align-items: flex-start; /* Alinha os itens ao lado esquerdo */
+    text-align: left; /* Alinha o texto dentro de cada parágrafo à esquerda */
+    gap: 30px;
+}
+
+
+.alinhar {
+    width: 300px;
+}
+
+.editar {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center; /* Centraliza o 'section' horizontalmente na página */
+}
+
+
+/* Cabeçalho//NAV BAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.separador{
+    border-style:groove;
+    border-color: yellow;
+    border-left: black;
+    border-top: black;
+    border-bottom: black;
+}
+
+nav {
+    background-color: #284e26; /* Cor de fundo da navbar */
+    height: 80px; /* Altura da navbar */
+    width: 100%; /* Largura total */
+    position: fixed; /* Fixa a navbar no topo */
+    top: 0; /* Posiciona a navbar exatamente no topo */
+    left: 0; /* Garante que ela comece do lado esquerdo */
+    z-index: 1000;  /* Garante que a navbar fique acima de outros conteúdos */
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    margin:0px; /* Remove a margem da lista */
+    padding: 0; /* Remove o preenchimento,em volta da lista */
+    display: flex; /* Flexbox para distribuição dos itens */
+    justify-content: flex-end; /* Alinha os itens à direita */
+    align-items: center; /* Alinha verticalmente os itens */
+    height: 0px; /* Faz a lista ocupar a altura da navbar */
+    
+}
+
+nav ul li {
+    margin: 0; /* Remove a margem dos itens da lista */
+}
+
+nav ul li a {
+    display: block;
+    padding: 20px 30px; /* Espaçamento interno dos links */
+    color: white; /* Cor do texto dos links */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove o sublinhado */
+    word-spacing: 5px; /* Aumenta o espaçamento entre palavras */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration:rgb(0, 73, 156) underline; /* Cor ao passar o mouse nos links */
+    height: 10px;
+}
+
+.Logo{
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: italic;
+    height: 25px;
+    margin-left: 20px;
+    font-family: Poppins;
+   
+}
