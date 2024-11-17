@@ -45,7 +45,7 @@ if (verificarCheckboxes()) {
     calcularValor();
     this.localStorage.setItem('pedido', JSON.stringify(pedido));
     this.localStorage.setItem('total', JSON.stringify(this.valor));
-    window.location.href = "site-main/sites/pagConfirmar.html";
+    window.location.href = "cadastroLoginComDB-PROJETO-main/site-main/sites/pagConfirmar.html";
 } else {
     alert('Por favor, selecione pelo menos um produto.');
 }}
@@ -263,6 +263,6 @@ function calcularValor(valor){
 
 servicos.onclick = function(){
     if(entregador){
-        window.location.href = "site-main/sites/visualizarPedidos.html";
+        window.location.href = "cadastroLoginComDB-PROJETO-main/site-main/sites/visualizarPedidos.html";
     }
 }

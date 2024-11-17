@@ -6,7 +6,7 @@ const buttonAlert = document.getElementById("btn-confirmar");
 
         buttonAlert.onclick = async function() {
             alert("Seu pedido foi Confirmado!");
-            window.location.href = "../../index.html";
+            window.location.href = "../../../index.html";
         };
 
     var texto = document.getElementById("nome");
